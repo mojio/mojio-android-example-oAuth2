@@ -7,9 +7,13 @@
 *Note: Currently project is downloaded as the full source, eventually we will want create the project as as AAR file and host it on one of the library repositories.*
 
 1. Download the Android Mojio SDK project (or AAR file)
+
 2. Create a folder for the project (Example: my-first-mojio)
+
 3. Open Android studio and create a new Android project in that folder (Example: MyFirstMojio)
+
 4. Import the SDK; there are a few ways to do this (depending on if you have the AAR file, or the entire SDK source):
+  
   1. Use the AAR library file (ie. not the entire project source)
     * Copy the mojiosdksrc-1.0.0.aar file into your project's app/libs folder
     * Update your app's build.gradle script to use include the libs folder as a repository:
@@ -35,6 +39,7 @@
     * Sync your gradle file
     * If successful, no errors should occur. 
     * If ClassNoDefFoundErrors are found while using the Mojio SDK, then these dependencies were not properly resolved.
+  
   2. Linking to the downloaded SDK source project directly (preferred); this method allows you to use the same copy of the SDK source in multiple projects. SDK updates will be easier to maintain this way.
     * To do this, you add the SDK as a project in your project's settings.gradle file; note that this will contain the relative path to the mojiosdksrc module, which may be different than the path below.
       ```
@@ -49,6 +54,7 @@
         compile project(':mojiosdksrc')
       }
       ```
+  
   3. Importing a *copy* of the source from the downloaded SDK; this method will still work, but will cause multiple copies of the SDK source to be created in each one of your projects. SDK updates will be harder to maintain.
     * Select File ==> Import Module
     * Navigate to the downloaded SDK and select the "mojiosdksrc" module from the SDK (ie. ../mojio-android-sdk/MojioSDK/mojiosdksrc). 
@@ -61,7 +67,9 @@
         compile project(':mojiosdksrc')
       }
       ```
+
 5. Re-sync the gradle scripts to finish loading the SDK module
+
 6. Now the SDK (including the MojioClient object) can be used in your app!
 
 
