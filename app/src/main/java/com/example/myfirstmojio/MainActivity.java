@@ -9,10 +9,10 @@ import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.mojio.mojiosdk.MojioClient;
-import com.mojio.mojiosdk.models.User;
-
 import java.util.HashMap;
+
+import io.moj.mobile.android.sdk.MojioClient;
+import io.moj.mobile.android.sdk.models.User;
 
 public class MainActivity extends ActionBarActivity {
 
@@ -21,9 +21,8 @@ public class MainActivity extends ActionBarActivity {
     // These values will match the keys given to you for your Mojio application in the
     // Mojio Developer panel.
     //===========================================================================
-    private final static String MOJIO_APP_ID = "9137247b-1f45-49db-8a54-094ba590079c";
-    private final static String MOJIO_APP_SECRET_KEY = "2c095c37-c35e-4547-b5a0-36ee57d98c07";
-    private final static String REDIRECT_URL = "myfirstmojio://";
+    private final static String MOJIO_APP_ID = "<YOUR_APP_ID>";
+    private final static String REDIRECT_URL = "<YOUR_APP_REDIRECT>://"; // Example "myfirstmojio://"
 
     //===========================================================================
     // Activity properties
@@ -49,7 +48,7 @@ public class MainActivity extends ActionBarActivity {
         setContentView(R.layout.activity_main);
 
         // Setup mojio client with app keys.
-        mMojio = new MojioClient(this, MOJIO_APP_ID, MOJIO_APP_SECRET_KEY, REDIRECT_URL);
+        mMojio = new MojioClient(this, MOJIO_APP_ID, null, REDIRECT_URL);
 
         mUserName = (TextView)findViewById(R.id.user_name);
         mUserEmail = (TextView)findViewById(R.id.user_email);
