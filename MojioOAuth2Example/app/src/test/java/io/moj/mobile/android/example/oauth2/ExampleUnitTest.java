@@ -1,4 +1,4 @@
-package io.moj.mobile.android.example.oauth2;
+package io.moj.mobile.android.example.oauth;
 
 import org.junit.Test;
 

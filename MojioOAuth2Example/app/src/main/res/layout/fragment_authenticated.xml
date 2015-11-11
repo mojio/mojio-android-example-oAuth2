@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="12dp">
+
+    <TextView
+        android:id="@+id/lbl_instructions"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/instructions"/>
+
+    <TextView
+        android:id="@+id/lbl_access_token"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/lbl_instructions"
+        android:layout_marginTop="20dp"
+        android:text="@string/access_token"/>
+
+    <TextView
+        android:id="@+id/txt_access_token"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@id/lbl_access_token"
+        android:layout_toRightOf="@id/lbl_access_token"
+        android:layout_marginLeft="4dp"/>
+
+    <TextView
+        android:id="@+id/lbl_expires_in"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/txt_access_token"
+        android:layout_marginTop="8dp"
+        android:text="@string/expires_in"/>
+
+    <TextView
+        android:id="@+id/txt_expires_in"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@id/lbl_expires_in"
+        android:layout_toRightOf="@id/lbl_expires_in"
+        android:layout_marginLeft="4dp"/>
+
+</RelativeLayout>
