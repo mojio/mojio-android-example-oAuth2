@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--
+    Use POST /v2/apps to get a client_id
+    {
+      "Name": "MojioOAuthExample-Android",
+      "Description": "Sample app using Mojio's OAuth2",
+      "RedirectUris": [
+        "oauth://io.moj.mobile.android.example.oauth"
+      ],
+      "Tags": [],
+      "Id": "03eb31c6-71ba-4570-b9ad-e9e6774b4f8d",
+      "CreatedOn": "2015-11-10T19:54:38.014203Z",
+      "LastModified": "2015-11-10T19:54:38.7160751Z",
+      "Links": {
+        "Self": "/v2/apps/03eb31c6-71ba-4570-b9ad-e9e6774b4f8d",
+        "Permissions": "/v2/apps/03eb31c6-71ba-4570-b9ad-e9e6774b4f8d/permissions",
+        "Permission": "/v2/apps/03eb31c6-71ba-4570-b9ad-e9e6774b4f8d/permission"
+      }
+    }
+
+    -->
+    <!-- PUT YOUR CLIENT ID HERE -->
+    <string name="client_id">03eb31c6-71ba-4570-b9ad-e9e6774b4f8d</string>
+    <string name="redirect_uri_scheme">oauth</string>
+    <string name="redirect_uri_host">io.moj.mobile.android.example.oauth</string>
+    <string name="redirect_uri">%1$s://%2$s</string>
+    <string name="scope">full</string>
+</resources>
